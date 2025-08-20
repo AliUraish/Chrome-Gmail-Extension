@@ -1,0 +1,30 @@
+{
+  "name": "Gmail Email Manager",
+  "description": "To delete, archive or unsubscribe mails",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Gmail Email Manager",
+    "default_icon": ""
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"],
+      "css":["styles.css"]
+    }
+  ],
+    "background": {
+        "service_worker": "background.js"
+}
+}
