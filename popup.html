@@ -39,6 +39,18 @@
             <input type="checkbox" id="Only Marketing" checked>
             <label for="OnlyMarketingEmails">Only Marketing Emails:</label>
         </div>
+        ##!-- Buttons for actions: Scan and Unsubscribe-->
+        <div class="actions">
+            <button id="scanBtn" class="primary-btn">
+            <span class="btn-text">Scan For Unsubscribe Links</span>
+            <span class="loading" style=" display: none;">Scanning...</span>
+            </button>
+            <button id="unsubscribeBtn" class="secondary-btn" disabled>
+                Mass Unsubscribe (<span id="count"></span>)
+            </button>
+        </div>
+
+        
 
      
 </html>
