@@ -20,13 +20,25 @@
             <div class ="option">
             <input type="checkbox" id="scanPromotions" checked>
             <label for="scanPromotions">Scan Promotions</label>
+            </div>
             <div class ="option">
             </div>
             <input type="checkbox" id="scanAll" checked>
             <label for="scanAll">Scan All Mails</label>
             </div>
-
+            #(Filter Options about till when to scan and if only marketing Emails)
         </div>
-        
+        <div class="section">
+            <h3>Filters</h3>
+            <div class="option">
+                <label for="daysBack">Days Back to Scan:</label>
+                <input type="number" id="daysback" value="30" min="1" max="365">
+            </div>
+        </div>
+        <div class="option">
+            <input type="checkbox" id="Only Marketing" checked>
+            <label for="OnlyMarketingEmails">Only Marketing Emails:</label>
+        </div>
+
      
 </html>
