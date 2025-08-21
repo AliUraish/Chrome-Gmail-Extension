@@ -5,12 +5,12 @@
         <link rel="stylesheet" href="styles.css">
     </head>
   <body>
-    #{!-- This is the popup for the Gmail Email Manager extension --}
+    <!-- This is the popup for the Gmail Email Manager extension -->
     <div class ="popup-container">
         <h1>Gmail Email Manager</h1>
         <p>Manage your emails efficiently with options to delete, archive, or unsubscribe.</p>
        
-        #(!-- Buttons to perform actions: Scan Inbox, Promotions, All Mails--)
+        <!-- Buttons to perform actions: Scan Inbox, Promotions, All Mails-->
         <div class="section">
             <h3>Scan Options</h3>
           <div class ="option">
@@ -22,24 +22,23 @@
             <label for="scanPromotions">Scan Promotions</label>
             </div>
             <div class ="option">
-            </div>
             <input type="checkbox" id="scanAll" checked>
             <label for="scanAll">Scan All Mails</label>
             </div>
-            #(Filter Options about till when to scan and if only marketing Emails)
+            <!--Filter Options about till when to scan and if only marketing Emails-->
         </div>
         <div class="section">
             <h3>Filters</h3>
             <div class="option">
                 <label for="daysBack">Days Back to Scan:</label>
-                <input type="number" id="daysback" value="30" min="1" max="365">
+                <input type="number" id="daysBack" value="30" min="1" max="365">
             </div>
         </div>
         <div class="option">
-            <input type="checkbox" id="Only Marketing" checked>
+            <input type="checkbox" id="OnlyMarketingEmails" checked>
             <label for="OnlyMarketingEmails">Only Marketing Emails:</label>
         </div>
-        ##!-- Buttons for actions: Scan and Unsubscribe-->
+        <!-- Buttons for actions: Scan and Unsubscribe-->
         <div class="actions">
             <button id="scanBtn" class="primary-btn">
             <span class="btn-text">Scan For Unsubscribe Links</span>
@@ -49,8 +48,16 @@
                 Mass Unsubscribe (<span id="count"></span>)
             </button>
         </div>
-
+        <!--Results after a successful scan-->
+        <div class="results" id="results" style="display: none;">
+            <h3>Found Emails:</h3>
+            <div class="email-list" id="email-list">
+            </div>
+            <!--Search Status-->
+            <div class="status" id="status"></div>
+        </div>
+        <!--Script is loaded. pop.js will find elements by their id attributes after ensuring all DOM is loaded-->
+        <script src="popup.js"></script>
         
-
-     
+    </body>
 </html>
